@@ -1,0 +1,49 @@
+@import "../../mixins.scss";
+
+.navbar {
+  height: 10rem;
+
+  .navbar__wrapper {
+    max-width: 136.6rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include desktop {
+      justify-content: flex-end;
+      padding: 2rem;
+    }
+
+    .nav-logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--primaryFont);
+      padding: 0.2rem;
+      border-radius: 0.8rem;
+      img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+      }
+      @include mobile {
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

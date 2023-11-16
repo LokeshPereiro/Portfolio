@@ -1,0 +1,65 @@
+:root {
+  --red: #ff2e2e;
+  --primaryFont: aliceblue;
+  --secondaryFont: gray;
+  --blue: #0000ff;
+  --lightBlue: #346395;
+  --darkBlue: #1d1836;
+  --yellow: #ffef00;
+  --dark: #0c0c1d;
+  --greenLime: #6caa43;
+  --gradient: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-weight: 500;
+
+  scroll-snap-type: y mandatory; //full section view
+  scroll-behavior: smooth;
+
+  color: var(--primaryFont);
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--dark);
+}
+
+.contentWrapper {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
