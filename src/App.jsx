@@ -7,6 +7,7 @@ import { Navbar } from "./components";
 import About from "./pages/about/About";
 import Experience from "./pages/experience/Experience";
 import Tech from "./pages/tech/Tech";
+import Projects from "./pages/projects/Projects";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <About />
       <Tech />
       <Experience />
+      <Projects />
     </BrowserRouter>
   );
 };

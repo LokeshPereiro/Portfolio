@@ -8,6 +8,7 @@ import {
 } from "@react-three/drei";
 
 import { CanvasLoader } from "../canvas-loader/CanvasLoader";
+
 import { Suspense } from "react";
 
 const Ball = (props) => {

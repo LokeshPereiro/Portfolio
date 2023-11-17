@@ -10,14 +10,9 @@ export const ExperienceCard = ({ experience }) => {
         background: "var(--darkBlue)",
         color: "var(--primaryColor)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="icons">
-          <img src={experience.icon} alt={experience.company_name} />
-        </div>
-      }
+      iconStyle={{ background: "#1d1836" }}
+      icon={<img src={experience.icon} alt={experience.company_name} />}
     >
       <div className="info">
         <h3>{experience.title}</h3>
@@ -26,7 +21,26 @@ export const ExperienceCard = ({ experience }) => {
 
       <ul>
         {experience.points.map((point, index) => (
-          <li key={`experience-point-${index}`}>{point}</li>
+          <li key={`experience-point-${index}`}>
+            <span>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-check"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#fff"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l5 5l10 -10" />
+                </svg>
+              </div>
+              {point}
+            </span>
+          </li>
         ))}
       </ul>
     </VerticalTimelineElement>

@@ -1,0 +1,62 @@
+@import "../../mixins.scss";
+.projectCard {
+  background: var(--gradient);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 45rem;
+
+  .imgContainer {
+    position: relative;
+    width: 100%;
+    height: 23rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+    .projectSources {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: end;
+      margin: 1rem;
+
+      .projectSources__links {
+        width: 5rem;
+        background: var(--dark);
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .descriptionContainer {
+    margin-top: 1rem;
+    h3 {
+      font-size: 2rem;
+
+      color: var(--blue);
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    gap: 1rem;
+    font-size: 1.4rem;
+  }
+}

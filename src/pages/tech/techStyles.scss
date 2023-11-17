@@ -1,0 +1,14 @@
+@import "../../mixins.scss";
+
+h2 {
+  margin-bottom: 2rem;
+}
+.techStackContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  canvas {
+    width: 25rem;
+  }
+}
