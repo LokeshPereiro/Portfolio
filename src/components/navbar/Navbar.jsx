@@ -1,47 +1,48 @@
-import { Sidebar } from "../sidebar/Sidebar";
+import { useState } from "react";
+import { navLinks } from "../../constants";
 import "./navbar.scss";
 import { motion } from "framer-motion";
+import { HiMenuAlt4, HiX } from "react-icons/hi";
+import lpDraft from "../../assets/lpDraft.png";
 
 export const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
   return (
-    <div className="navbar">
-      <div className="navbar__wrapper">
-        <motion.span
-          className="nav-logo"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {"<LokeshPereiro/>"}
-        </motion.span>
+    <nav className="navbar d_flex unselectable">
+      <a href={"#landing"} className="navbar-logo">
+        <img src={lpDraft} alt="portfolio logo" />
+      </a>
 
-        <div className="social-links">
-          <motion.a
-            href="https://www.linkedin.com/in/lokesh-pereiro-mart%C3%ADnez-falero-334818135/"
-            target="blank"
-            className="linkedin"
-            transition={{
-              duration: 0.5,
-            }}
-            whileHover={{ scale: 0.9 }}
+      <ul className="navbar-links d_flex">
+        {navLinks.map((item) => (
+          <li key={`link-${item.id}`}>
+            <motion.a href={`#${item.id}`}>{item.title}</motion.a>
+          </li>
+        ))}
+      </ul>
+
+      <div className="navbar-menu d_flex">
+        <HiMenuAlt4 onClick={() => setToggle(true)} />
+
+        {toggle && (
+          <motion.div
+            whileInView={{ x: [300, 0] }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
           >
-            <img src="/linkedin.png" alt="linkedin logo" />
-          </motion.a>
-          <motion.a
-            href="https://github.com/LokeshPereiro"
-            target="blank"
-            className="github"
-            whileHover={{ scale: 0.9 }}
-            transition={{
-              duration: 0.5,
-            }}
-          >
-            <img src="/github.png" alt="github logo" />
-          </motion.a>
-        </div>
+            <HiX onClick={() => setToggle(false)} />
+
+            <ul>
+              {navLinks.map((item) => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`} onClick={() => setToggle(false)}>
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
       </div>
-
-      <Sidebar />
-    </div>
+    </nav>
   );
 };

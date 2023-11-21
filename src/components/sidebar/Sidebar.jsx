@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./sidebar.scss";
+import "./sidebarStyles.scss";
 
 import { Links } from "./links/Links";
 import { ToggleButton } from "./toggleButton/ToggleButton";
 
 export const Sidebar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const variants = {
     open: {
@@ -27,11 +27,13 @@ export const Sidebar = () => {
     },
   };
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
-      <motion.div className="sidebar__links" variants={variants}>
-        <Links />
-      </motion.div>
-      <ToggleButton setOpen={setOpen} open={open} />
-    </motion.div>
+    // <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+    //   <motion.div className="sidebar__links" variants={variants}>
+    //     <Links />
+    //   </motion.div>
+
+    //   <ToggleButton className="toggleBtn" setOpen={setOpen} open={open} />
+    // </motion.div>
+    <motion.div></motion.div>
   );
 };

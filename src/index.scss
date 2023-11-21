@@ -10,6 +10,7 @@
   --greenLime: #6caa43;
   --gradient: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -62,4 +63,11 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

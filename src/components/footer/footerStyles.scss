@@ -1,0 +1,76 @@
+@import "../../mixins.scss";
+.footer {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menuItems {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .menuItem {
+      transition: all ease 0.3s;
+      cursor: pointer;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+  .infoText {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    opacity: 0.5;
+    text-align: center;
+    max-width: 80rem;
+    margin-bottom: 2rem;
+  }
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    .icon {
+      text-decoration: none;
+      color: var(--darkWhite);
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all ease 0.3s;
+
+      &:hover {
+        box-shadow: 0 0 0.625em var(--lightBlue);
+        &:hover.github {
+          color: var(--yellowOrange);
+        }
+        &:hover.linkedin {
+          color: blue;
+        }
+      }
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  .copyright {
+    font-size: 1.3rem;
+  }
+}

@@ -9,7 +9,7 @@ import { SectionWrapper } from "../../components/hoc/SectionWrapper";
 
 const Experience = () => {
   return (
-    <>
+    <div className="unselectable">
       <motion.div variants={textVariant()}>
         <p className="subtitle">What I have done so far</p>
         <h2 className="title">Work Experience.</h2>
@@ -25,7 +25,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   );
 };
 

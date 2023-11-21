@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./landing.scss";
-import { fadeIn } from "../../utils/motion";
-
+import scrollImg from "../../assets/scroll.png";
+import lok from "../../assets/lok.png";
 const textVariants = {
   initial: {
     x: -500,
@@ -41,7 +41,7 @@ const sliderVariants = {
 
 export const LandingPage = () => {
   return (
-    <div className="landing">
+    <div className="landing unselectable" id="landing">
       <div className="landing__wrapper">
         <motion.div
           className="landing__wrapper-textContainer"
@@ -54,18 +54,20 @@ export const LandingPage = () => {
           </motion.h2>
           <motion.h1 variants={textVariants}>Fullstack Developer</motion.h1>
           {/* BUttons */}
-
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.a href="#projects" variants={textVariants}>
+              Latest Projects
+            </motion.a>
+
+            <motion.a href="#contact" variants={textVariants}>
+              Contact Me
+            </motion.a>
           </motion.div>
 
           <motion.img
             variants={textVariants}
             animate="scrollButton"
-            src="/scroll.png"
+            src={scrollImg}
             alt="scrolling img"
           />
         </motion.div>
@@ -92,7 +94,7 @@ export const LandingPage = () => {
           damping: 10,
         }}
       >
-        <motion.img src="/lok.png" alt="landing image" />
+        <motion.img src={lok} alt="lokesh pereiro" />
       </motion.div>
     </div>
   );

@@ -1,8 +1,9 @@
 export const navLinks = [
-  { title: "Home", id: "home" },
   { title: "About", id: "about" },
   { title: "Tech", id: "tech" },
+  { title: "Experience", id: "work" },
   { title: "Projects", id: "projects" },
+  { title: "Contact", id: "contact" },
 ];
 
 import {
@@ -26,21 +27,32 @@ import {
   ait,
   firebase,
   carrent,
-  jobit,
   tripguide,
   threejs,
   programmer,
+  mern,
 } from "../assets";
 
 const services = [
   {
     title: "Frontend Developer",
     icon: frontend,
+    description:
+      "I focus on creating intuitive, functional and accessible websites, while keeping in mind user experience and code reusability.",
   },
 
   {
     title: "Backend Developer",
     icon: backend,
+    description:
+      "I am a devoted Backend Developer who loves working in server arcitecture, database and Rest Apis callings making sure that the critical path of our website works well and providing optimised and valuable data to frontend.",
+  },
+
+  {
+    title: "MERN Stack Developer",
+    icon: mern,
+    description:
+      "When it comes to fullstack apps, I enjoy working mainly with MERN Stack to build robust and sustainable web apps takeing into account best practices and scalable code.",
   },
 ];
 
@@ -197,4 +209,24 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+const trabajos = [
+  {
+    name: "Car Rent",
+    description:
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    image: carrent,
+    project_demo: "https://github.com/",
+    github_link: "https://github.com/",
+    tags: ["UI/UX", "All"],
+  },
+  {
+    name: "Trip Guide",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: ["Web App", "All"],
+    image: tripguide,
+    projectDemo: "https://github.com/",
+    githubLink: "https://github.com/",
+  },
+];
+export { services, technologies, experiences, projects, trabajos };

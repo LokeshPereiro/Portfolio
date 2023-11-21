@@ -12,7 +12,7 @@ const Tech = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className="subtitle">Technologies I work with</p>
-        <h2 className="title">Tech Stack.</h2>
+        <h2 className="title">Tech Stack</h2>
       </motion.div>
 
       <div className="techStackContainer">

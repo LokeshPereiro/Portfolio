@@ -1,0 +1,52 @@
+@import "../../mixins.scss";
+
+.sidebar {
+  cursor: pointer;
+
+  .sidebar__links {
+    z-index: 999;
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    width: 40rem;
+    background: var(--primaryFont);
+    color: var(--dark);
+
+    // @include mobile {
+    //   width: 20rem;
+    // }
+
+    .links {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      background: #fff;
+    }
+    a {
+      color: var(--dark);
+      font-size: 4rem;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .toggleBtn {
+    z-index: 999;
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+  }
+}
