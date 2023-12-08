@@ -174,7 +174,7 @@ const projects = [
     project_demo: "https://movie-app-redux-tmdb.vercel.app/",
     github_link:
       "https://github.com/LokeshPereiro/MovieApp_Redux_TMDB/tree/develop",
-    tags: ["React", "All"],
+    tags: ["React", "JS", "All"],
   },
   {
     name: "Frontend Mentor",
@@ -190,9 +190,9 @@ const projects = [
     name: "GithubUser App",
     description:
       "App built with Reactjs and React Toolkit as well as Auth0 for authentication features in it. Find your favourite code mentors, peers, friends... and get benefits from graphical stats",
-    tags: ["Fullstack", "All"],
+    tags: ["Fullstack", "JS", "All"],
     image: githubusers,
-    projectDemo: "https://lokeshpereiro.github.io/js-vite-blackjack/",
+    projectDemo: "https://lok-github-user.netlify.app/",
     githubLink: "https://github.com/LokeshPereiro/GithubUsers_",
   },
 ];
