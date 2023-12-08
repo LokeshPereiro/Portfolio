@@ -16,10 +16,11 @@ import ait from "./company/ait.jpg";
 import programmer from "./company/programmer.png";
 import coke from "./company/coke.jpg";
 
-// Projects
-import carrent from "./projects/carrent.png";
-import jobit from "./projects/jobit.png";
-import tripguide from "./projects/tripguide.png";
+//Projects
+import movie from "./projects/movie.png";
+import mentor from "./projects/mentor.png";
+import blackjack from "./projects/blackjack.png";
+import githubusers from "./projects/githubusers.png";
 
 //Tech stack
 import html from "./tech/html.png";
@@ -62,11 +63,12 @@ export {
   redux,
   threejs,
   firebase,
-  carrent,
-  jobit,
-  tripguide,
   coke,
   ait,
   programmer,
   mern,
+  movie,
+  mentor,
+  blackjack,
+  githubusers,
 };

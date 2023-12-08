@@ -14,10 +14,11 @@
   margin: 4rem 0 2rem;
 
   .app__work-filter-item {
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     border-radius: 0.5rem;
     background-color: var(--primaryFont);
     color: #000;
+    font-size: 1.5rem;
     font-weight: 800;
 
     cursor: pointer;
@@ -47,8 +48,10 @@
   align-items: center;
 
   .app__work-item {
-    width: 270px;
+    height: 38rem;
+    width: 36rem;
     flex-direction: column;
+    overflow: hidden;
 
     margin: 2rem;
     padding: 1rem;
@@ -106,21 +109,19 @@
 }
 
 .app__work-img {
-  width: 100%;
-  height: 230px;
   position: relative;
   border-radius: 0 0 0.5rem 0.5rem;
+  overflow: hidden;
+  height: 28rem;
 
   img {
     width: 100%;
     object-fit: cover;
-    border-radius: 0.5rem;
-    transition: all 2s ease;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition: all 5s ease;
   }
-  &:hover {
-    img {
-      transform: scale(0.95);
-    }
+  &:hover img {
+    transform: translateY(-10%);
   }
   @media screen and (min-width: 2000px) {
     height: 350px;

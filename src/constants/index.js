@@ -26,11 +26,13 @@ import {
   coke,
   ait,
   firebase,
-  carrent,
-  tripguide,
   threejs,
   programmer,
   mern,
+  movie,
+  mentor,
+  blackjack,
+  githubusers,
 } from "../assets";
 
 const services = [
@@ -165,68 +167,33 @@ const experiences = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Movie App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "var(--blue)",
-      },
-      {
-        name: "mongodb",
-        color: "var(--greenLime)",
-      },
-      {
-        name: "tailwind",
-        color: "var(--lightBlue)",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+      "Movie application developed with Reactjs & Redux toolkit. Fetching data from the Rest Api of The Movie Data Base.",
+    image: movie,
+    project_demo: "https://movie-app-redux-tmdb.vercel.app/",
+    github_link:
+      "https://github.com/LokeshPereiro/MovieApp_Redux_TMDB/tree/develop",
+    tags: ["React", "All"],
   },
-
   {
-    name: "Trip Guide",
+    name: "Frontend Mentor",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "var(--red)",
-      },
-      {
-        name: "supabase",
-        color: "var(--greenLime)",
-      },
-      {
-        name: "css",
-        color: "var(--yellow)",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+      "Testing my React skills where I have to pull data from the Rest Countries Api and build filtering and searching componentes",
+    tags: ["Frontend", "All"],
+    image: mentor,
+    projectDemo: "https://lokdraft-rest-countriesapp.netlify.app/",
+    githubLink:
+      "https://github.com/LokeshPereiro/Frontend-Mentor-REST-Countries-Challange",
+  },
+  {
+    name: "GithubUser App",
+    description:
+      "App built with Reactjs and React Toolkit as well as Auth0 for authentication features in it. Find your favourite code mentors, peers, friends... and get benefits from graphical stats",
+    tags: ["Fullstack", "All"],
+    image: githubusers,
+    projectDemo: "https://lokeshpereiro.github.io/js-vite-blackjack/",
+    githubLink: "https://github.com/LokeshPereiro/GithubUsers_",
   },
 ];
-
-const trabajos = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    image: carrent,
-    project_demo: "https://github.com/",
-    github_link: "https://github.com/",
-    tags: ["UI/UX", "All"],
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: ["Web App", "All"],
-    image: tripguide,
-    projectDemo: "https://github.com/",
-    githubLink: "https://github.com/",
-  },
-];
-export { services, technologies, experiences, projects, trabajos };
+export { services, technologies, experiences, projects };

@@ -34,8 +34,8 @@ const ContactPage = () => {
 
     emailjs
       .send(
-        "service_lksud9o",
-        "service_lksud9o",
+        import.meta.env.VITE_APP_EmailID,
+        import.meta.env.VITE_APP_EmailTemplate,
         {
           from_name: form.name,
           to_name: "Lokesh Pereiro",
@@ -43,7 +43,7 @@ const ContactPage = () => {
           to_email: "lokeshpereiromf@gmail.com",
           message: form.message,
         },
-        "_dW81VWpSEVHdE1Ee"
+        import.meta.env.VITE_APP_PublicKey
       )
       .then(
         () => {
